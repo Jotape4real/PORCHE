@@ -1897,4 +1897,71 @@ section,
 .navbar-mobile .mobile-nav-toggle {
     color: #fff;
 }
+/* --- CURSOR: PONTO DE LASER (Minimalista) --- */
+body {
+    cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="3" fill="%23d5001c"/></svg>') 5 5, auto;
+}
+
+/* Para links e botões, volta para a mãozinha, mas vermelha */
+a, button, .btn, .porsche-card, .details-link, .whatsapp-float, .navbar-mobile .mobile-nav-toggle {
+    cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%23d5001c" d="M10 0l-6 6h4v14h4v-14h4l-6-6z"/></svg>') 10 0, pointer;
+}
+/* --- BOTÃO FLUTUANTE 3D (ESTILO FÍSICO) --- */
+#finder-widget {
+    position: fixed;
+    bottom: 30px;
+    left: 40px;
+    z-index: 9990;
+    
+    /* 1. Fundo Gradiente (Simula curvatura metálica) */
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    
+    /* 2. Bordas de Iluminação (O segredo do 3D) */
+    /* Borda superior clara, borda inferior escura */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 4px solid #d5001c; /* Marca Porsche */
+    
+    /* 3. Sombras Complexas (Profundidade) */
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.8), /* Sombra distante */
+        inset 0 1px 0 rgba(255,255,255,0.1); /* Brilho interno no topo */
+        
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    min-width: 260px;
+    border-radius: 4px; /* Cantos levemente arredondados */
+    
+    /* Animação suave */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efeito Hover (Quando passa o mouse) - O botão "levanta" */
+#finder-widget:hover {
+    background: linear-gradient(145deg, #252525, #151515); /* Fica mais claro */
+    transform: translateY(-4px) scale(1.02); /* Sobe e cresce um pouco */
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.9), /* Sombra fica maior e mais longe */
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        0 0 15px rgba(213, 0, 28, 0.2); /* Brilho vermelho sutil atrás */
+    border-left-color: #ff0022; /* Vermelho acende */
+}
+
+/* Efeito Click (Quando clica) - O botão "afunda" */
+#finder-widget:active {
+    transform: translateY(2px); /* Desce */
+    box-shadow: 
+        0 5px 10px rgba(0,0,0,0.9), /* Sombra diminui */
+        inset 0 5px 10px rgba(0,0,0,0.5); /* Sombra interna (afundado) */
+}
+
+/* Mantendo as cores do texto/ícone */
+#finder-widget .widget-title { color: #fff; text-shadow: 0 2px 2px rgba(0,0,0,0.8); }
+#finder-widget:hover .widget-title { color: #fff; } /* Mantém branco no hover para contraste */
+#finder-widget:hover .widget-icon i { color: #ff0022; text-shadow: 0 0 10px rgba(213,0,28,0.8); }
+
 

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Porsche Model Detail</title>
+  
+  <link href="assets/img/porsche-logo.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+      /* Estilo Específico desta página */
+      body { background: #0e0e0e; color: #fff; overflow-x: hidden; }
+      
+      /* Hero Gigante */
+      #model-hero {
+          height: 100vh;
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: 100px;
+      }
+      #model-hero::before {
+          content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+          background: linear-gradient(to top, #0e0e0e 10%, transparent 60%, rgba(0,0,0,0.4) 100%);
+      }
+
+      /* Título Gigante */
+      .model-name {
+          font-size: clamp(4rem, 10vw, 8rem);
+          font-weight: 800;
+          text-transform: uppercase;
+          font-style: italic;
+          line-height: 0.9;
+          position: relative;
+          z-index: 2;
+          opacity: 0; /* Começa invisível para animar */
+          transform: translateY(30px);
+          animation: fadeUp 1s forwards 0.5s;
+      }
+
+      /* Dados Técnicos */
+      .specs-row {
+          display: flex; gap: 50px; margin-top: 30px; position: relative; z-index: 2;
+          opacity: 0; animation: fadeUp 1s forwards 0.8s;
+      }
+      .spec-box span { display: block; }
+      .spec-val { font-size: 30px; font-weight: 700; color: #fff; }
+      .spec-label { font-size: 12px; text-transform: uppercase; color: #888; letter-spacing: 2px; }
+
+      /* Botão Voltar */
+      .back-btn {
+          position: absolute; top: 40px; left: 40px; z-index: 10;
+          color: #fff; text-decoration: none; font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
+          display: flex; align-items: center; gap: 10px;
+          transition: 0.3s;
+      }
+      .back-btn:hover { color: #d5001c; }
+
+      @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+      /* --- ESTILO DO BOTÃO VOLTAR --- */
+.back-home-btn {
+    position: fixed; /* Fica fixo na tela mesmo se rolar */
+    top: 40px;
+    left: 40px;
+    z-index: 9999; /* Fica acima de tudo */
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* Visual Vidro Fosco */
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    padding: 12px 25px;
+    border-radius: 50px; /* Formato de cápsula arredondada */
+    
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    
+    transition: all 0.3s ease;
+}
+
+/* Efeito Hover (Mouse em cima) */
+.back-home-btn:hover {
+    background: #d5001c; /* Vermelho Porsche */
+    border-color: #d5001c;
+    transform: translateX(-5px); /* Move levemente para a esquerda */
+    box-shadow: 0 5px 15px rgba(213, 0, 28, 0.4);
+}
+
+.back-home-btn i {
+    font-size: 18px;
+}
+  </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-home-btn">
+    <i class='bx bx-left-arrow-alt'></i>
+    <span>Garagem</span>
+</a>
+
+  
+  <section id="model-hero">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8">
+                  <div style="color: #d5001c; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;">Porsche Model</div>
+                  <h1 class="model-name" id="nameDisplay">CARREGANDO...</h1>
+                  
+                  <div class="specs-row">
+                      <div class="spec-box">
+                          <span class="spec-label">Potência</span>
+                          <span class="spec-val" id="hpDisplay">- cv</span>
+                      </div>
+                      <div class="spec-box">
+                          <span class="spec-label">0-100 km/h</span>
+                          <span class="spec-val" id="accelDisplay">- s</span>
+                      </div>
+                      <div class="spec-box">
+                          <span class="spec-label">Velocidade Máx.</span>
+                          <span class="spec-val" id="speedDisplay">- km/h</span>
+                      </div>
+                  </div>
+
+                  <div style="margin-top: 50px; position: relative; z-index: 2;">
+                      <a href="#" id="configBtn" target="_blank" class="btn" style="background: #d5001c; color: #fff; padding: 15px 40px; text-transform: uppercase; letter-spacing: 2px; border: none; text-decoration: none;">
+    Configurar Agora <i class='bx bx-right-arrow-alt'></i>
+</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <script>
+    // 1. BANCO DE DADOS ATUALIZADO (Com links reais de configuração)
+    const carDatabase = {
+        '911': {
+            name: '911 GT3 RS',
+            hp: '525',
+            accel: '3.2',
+            speed: '296',
+            bg: 'assets/img/bg-911.jpg', // Certifique-se que a imagem existe
+            // Link direto para montar um 911
+            configUrl: 'https://www.porsche.com/international/models/911/911-gt3-rs/911-gt3-rs/' 
+        },
+        '718': {
+            name: '718 Cayman GT4',
+            hp: '420',
+            accel: '4.4',
+            speed: '304',
+            bg: 'assets/img/bg-718.jpg',
+            configUrl: 'https://www.porsche.com/international/models/718/718-cayman-gt4-rs/718-cayman-gt4-rs/'
+        },
+        'taycan': {
+            name: 'Taycan Turbo S',
+            hp: '761',
+            accel: '2.8',
+            speed: '260',
+            bg: 'assets/img/bg-taycan.jpg',
+            configUrl: 'https://www.porsche.com/international/models/taycan/taycan-models/taycan-turbo-s/'
+        },
+        'panamera': {
+            name: 'Panamera Turbo S',
+            hp: '630',
+            accel: '3.1',
+            speed: '315',
+            bg: 'assets/img/bg-panamera.jpg',
+            configUrl: 'https://www.porsche.com/international/models/panamera/panamera-models/panamera-turbo-e-hybrid/'
+        },
+        'macan': {
+            name: 'Macan GTS',
+            hp: '440',
+            accel: '4.3',
+            speed: '272',
+            bg: 'assets/img/bg-macan.jpg',
+            configUrl: 'https://www.porsche.com/international/models/macan/macan-models/macan-gts/'
+        },
+        'cayenne': {
+            name: 'Cayenne Turbo GT',
+            hp: '640',
+            accel: '3.3',
+            speed: '300',
+            bg: 'assets/img/bg-cayenne.jpg',
+            configUrl: 'https://www.porsche.com/international/models/cayenne/cayenne-electric-models/cayenne-electric/'
+        }
+    };
+
+    // 2. FUNÇÃO LÓGICA
+    function loadModel() {
+        const params = new URLSearchParams(window.location.search);
+        // O toLowerCase garante que "Taycan" e "taycan" funcionem igual
+        const carID = params.get('car') ? params.get('car').toLowerCase() : null;
+
+        if (carID && carDatabase[carID]) {
+            const data = carDatabase[carID];
+
+            // Preenche Texto
+            document.getElementById('nameDisplay').innerText = data.name;
+            document.getElementById('hpDisplay').innerText = data.hp + ' cv';
+            document.getElementById('accelDisplay').innerText = data.accel + ' s';
+            document.getElementById('speedDisplay').innerText = data.speed + ' km/h';
+
+            // Troca o Fundo
+            document.getElementById('model-hero').style.backgroundImage = `url('${data.bg}')`;
+            
+            // --- A MÁGICA ACONTECE AQUI ---
+            // Atualiza o link do botão para o configurador certo
+            const btn = document.getElementById('configBtn');
+            btn.href = data.configUrl;
+            
+            document.title = data.name + " | Porsche";
+        } else {
+            // Fallback (Se der erro, carrega o 911)
+            // document.getElementById('nameDisplay').innerText = "Modelo não encontrado";
+        }
+    }
+
+    window.onload = loadModel;
+</script>
+
+
+
+<div id="finder-widget" onclick="toggleMenu()">
+    <div class="widget-icon"><i class='bx bx-menu'></i></div>
+    <div class="widget-text">
+        <span class="widget-label">Navegação</span>
+        <span class="widget-title">Menu Porsche</span>
+    </div>
+    <div class="widget-arrow"><i class='bx bx-chevron-right'></i></div>
+</div>
+
+<div id="menu-overlay" onclick="toggleMenu()"></div>
+
+<div id="porsche-sidebar">
+    <div class="sidebar-header">
+        <div style="font-size: 20px; font-weight: 700; color: #fff; text-transform: uppercase;">
+            Porsche <span style="color: #d5001c;">Menu</span>
+        </div>
+        <button class="close-btn" onclick="toggleMenu()"><i class='bx bx-x'></i></button>
+    </div>
+
+    <div class="menu-list">
+        <div class="menu-item has-submenu" onclick="toggleSubmenu(this)">
+            <div class="menu-link"><span>Modelos</span><i class='bx bx-chevron-down arrow'></i></div>
+            <div class="submenu">
+                <a href="model.html?car=718">718 <span class="model-tag">Boxster/Cayman</span></a>
+                <a href="model.html?car=911">911 <span class="model-tag">Carrera/GT3</span></a>
+                <a href="model.html?car=taycan">Taycan <span class="model-tag">Elétrico</span></a>
+                <a href="model.html?car=panamera">Panamera <span class="model-tag">Sedan</span></a>
+                <a href="model.html?car=macan">Macan <span class="model-tag">SUV</span></a>
+                <a href="model.html?car=cayenne">Cayenne <span class="model-tag">SUV</span></a>
+            </div>
+        </div>
+
+        <div class="menu-item has-submenu" onclick="toggleSubmenu(this)">
+            <div class="menu-link"><span>Ferramentas</span><i class='bx bx-chevron-down arrow'></i></div>
+            <div class="submenu">
+                <a href="https://www.porsche.com/international/modelstart/" target="_blank">Configurar Veículo</a>
+                <a href="https://finder.porsche.com/br/pt-BR" target="_blank">Porsche Finder</a>
+            </div>
+        </div>
+
+        <div class="menu-item has-submenu" onclick="toggleSubmenu(this)">
+            <div class="menu-link"><span>Serviços & Acessórios</span><i class='bx bx-chevron-down arrow'></i></div>
+            <div class="submenu">
+                <a href="#" onclick="openServiceHub()">Porsche Service</a>
+                <a href="#" onclick="openServiceHub()">Peças Originais</a>
+                <a href="#" onclick="openServiceHub()">Tequipment</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <a href="index.html" class="menu-link">
+                <span>Voltar para Garagem</span>
+                <i class='bx bx-home' style="color: #d5001c;"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="service-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 12000; background: rgba(0,0,0,0.95); backdrop-filter: blur(15px); align-items: center; justify-content: center; padding: 20px;">
+    <div style="width: 100%; max-width: 1100px; position: relative;">
+        <button onclick="closeServiceHub()" style="position: absolute; top: -50px; right: 0; background: none; border: none; color: #fff; font-size: 30px; cursor: pointer;"><i class='bx bx-x'></i> Fechar</button>
+        <h2 style="color: #fff; text-transform: uppercase; font-size: 30px; margin-bottom: 40px; text-align: center;">Porsche <span style="color: #d5001c;">Aftersales</span></h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="service-card" onclick="window.open('https://wa.me/?text=Agendar revisão', '_blank')">
+                <div class="card-content" style="background: #111; padding: 30px; border: 1px solid #333; color: #fff;">
+                    <i class='bx bx-wrench' style="font-size: 40px; color: #d5001c;"></i><h3>Agendar Revisão</h3><p>Contactar via WhatsApp.</p>
+                </div>
+            </div>
+            <div class="service-card" onclick="window.open('https://www.porsche.com', '_blank')">
+                <div class="card-content" style="background: #111; padding: 30px; border: 1px solid #333; color: #fff;">
+                    <i class='bx bx-shopping-bag' style="font-size: 40px; color: #d5001c;"></i><h3>Tequipment</h3><p>Acessórios Genuínos.</p>
+                </div>
+            </div>
+            <div class="service-card" onclick="window.open('https://www.porsche.com', '_blank')">
+                <div class="card-content" style="background: #111; padding: 30px; border: 1px solid #333; color: #fff;">
+                    <i class='bx bx-cog' style="font-size: 40px; color: #d5001c;"></i><h3>Peças</h3><p>Catálogo de Peças.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Widget Flutuante */
+    #finder-widget {
+        position: fixed; bottom: 30px; left: 30px; z-index: 11000;
+        background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+        border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid #000; border-left: 4px solid #d5001c;
+        padding: 12px 25px; display: flex; align-items: center; gap: 15px; cursor: pointer;
+        min-width: 220px; border-radius: 4px; box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        transition: 0.3s;
+    }
+    #finder-widget:hover { transform: translateY(-3px); background: #222; }
+    .widget-title { color: #fff; font-weight: 700; text-transform: uppercase; font-size: 14px; }
+    .widget-label { display: block; font-size: 10px; color: #888; text-transform: uppercase; }
+    .widget-icon i, .widget-arrow i { font-size: 20px; color: #d5001c; }
+
+    /* Sidebar */
+    #porsche-sidebar {
+        position: fixed; top: 0; left: 0; width: 100%; max-width: 350px; height: 100%;
+        background: #0e0e0e; z-index: 12000; transform: translateX(-120%);
+        transition: transform 0.4s ease; border-right: 1px solid #222;
+        padding: 20px; overflow-y: auto;
+    }
+    #porsche-sidebar.active { transform: translateX(0); }
+    #menu-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.8); z-index: 11500; opacity: 0; visibility: hidden; transition: 0.3s;
+    }
+    #menu-overlay.active { opacity: 1; visibility: visible; }
+    
+    /* Itens do Menu */
+    .menu-item { border-bottom: 1px solid #1a1a1a; cursor: pointer; }
+    .menu-link { padding: 20px 10px; color: #fff; display: flex; justify-content: space-between; font-weight: 600; text-transform: uppercase; font-size: 14px; text-decoration: none; }
+    .submenu { max-height: 0; overflow: hidden; transition: 0.4s; background: #000; }
+    .menu-item.open .submenu { max-height: 400px; }
+    .submenu a { display: block; padding: 15px 30px; color: #999; text-decoration: none; font-size: 13px; border-left: 2px solid transparent; }
+    .submenu a:hover { color: #fff; border-left-color: #d5001c; background: #111; }
+    .model-tag { font-size: 10px; color: #555; margin-left: 5px; text-transform: uppercase; }
+    
+    .close-btn { background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; }
+</style>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('porsche-sidebar').classList.toggle('active');
+        document.getElementById('menu-overlay').classList.toggle('active');
+        
+        // Esconde o botão quando abre
+        const widget = document.getElementById('finder-widget');
+        if (document.getElementById('porsche-sidebar').classList.contains('active')) {
+            widget.style.transform = "translateX(-200%)";
+        } else {
+            widget.style.transform = "translateX(0)";
+        }
+    }
+
+    function toggleSubmenu(item) {
+        if (item.classList.contains('open')) {
+            item.classList.remove('open');
+        } else {
+            document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('open'));
+            item.classList.add('open');
+        }
+    }
+
+    function openServiceHub() {
+        toggleMenu(); // Fecha o menu lateral
+        document.getElementById('service-modal').style.display = 'flex';
+    }
+    function closeServiceHub() {
+        document.getElementById('service-modal').style.display = 'none';
+    }
+</script>
+</body>
+</html>
