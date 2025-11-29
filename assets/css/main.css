@@ -1964,4 +1964,54 @@ a, button, .btn, .porsche-card, .details-link, .whatsapp-float, .navbar-mobile .
 #finder-widget:hover .widget-title { color: #fff; } /* Mantém branco no hover para contraste */
 #finder-widget:hover .widget-icon i { color: #ff0022; text-shadow: 0 0 10px rgba(213,0,28,0.8); }
 
+/* Estilos Gerais para os Ícones Sociais com Imagem */
+.social-icon {
+    display: inline-flex; /* Para centralizar a imagem */
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Tamanho do círculo */
+    height: 36px; /* Tamanho do círculo */
+    border-radius: 50%; /* Faz o formato de círculo */
+    background-color: #333; /* Fundo do círculo */
+    margin: 0 5px; /* Espaçamento entre os círculos */
+    transition: all 0.3s ease;
+    border: 1px solid #444; /* Borda sutil */
+    
+    /* Propriedades para a imagem de fundo */
+    background-size: 70%; /* Tamanho da imagem dentro do círculo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+}
+
+/* Efeito Hover */
+.social-icon:hover {
+    background-color: #d5001c; /* Fica vermelho no hover */
+    border-color: #d5001c;
+    transform: translateY(-2px); /* Efeito de "levantar" */
+}
+
+/* Imagens Específicas para cada Rede Social */
+.social-icon.twitter {
+    background-image: url('img/social-icons/twitter.png'); /* Caminho para sua imagem do Twitter */
+}
+
+.social-icon.facebook {
+    background-image: url('../img/social-icons/facebook.png'); /* Caminho para sua imagem do Facebook */
+}
+
+.social-icon.instagram {
+    background-image: url('../img/social-icons/instagram.png'); /* Caminho para sua imagem do Instagram */
+}
+
+.social-icon.linkedin {
+    background-image: url('../img/social-icons/linkedin.png'); /* Caminho para sua imagem do LinkedIn */
+}
+
+/* Adicione mais se precisar: */
+/*
+.social-icon.youtube {
+    background-image: url('../img/social-icons/youtube.png');
+}
+*/
+
 
