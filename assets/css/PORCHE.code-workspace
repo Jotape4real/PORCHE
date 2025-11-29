@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "PORCHE",
+			"path": "../../../../../OneDrive/Documentos/GitHub/PORCHE"
+		},
+		{
+			"name": "Gp",
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Gp"
+	}
+}

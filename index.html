@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Porche</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/porsche-logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/porsche-logo.png">
+<link rel="apple-touch-icon" href="assets/img/porsche-logo.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Updated: Aug 15 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">GP</h1>
+        <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#portfolio">Portfolio</a></li>         
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center justify-content-center" 
+    style="
+    height: 100vh; 
+    /* Link direto de uma imagem agressiva do GT3 RS */
+    background: url('https://www.hdcarwallpapers.com/download/porsche_911_gt3_r_2022_5k_3-2560x1440.jpg') center center no-repeat; 
+    /* Truque: Cor de fundo cinza escuro para fundir com o carro caso a imagem não cubra tudo */
+    background-color: #101010;
+    background-size: cover; 
+    position: relative;">
+
+    <div style="
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+        background: radial-gradient(circle, transparent 20%, #0e0e0e 100%); 
+        z-index: 1;">
+    </div>
+
+    <div class="container position-relative" style="z-index: 2; height: 100%;">
+  <div class="row h-100 align-items-center justify-content-start">
+    <div class="col-xl-8 col-lg-9">
+        
+      <h1 data-aos="fade-up" data-aos-delay="100" style="
+          font-size: clamp(6rem, 12vw, 10rem); /* Aumentei ainda mais */
+          font-weight: 900; 
+          text-transform: uppercase; 
+          font-style: italic; 
+          color: #ffffff;
+          line-height: 0.8;
+          margin-bottom: 30px;
+          text-shadow: 0 10px 50px rgba(0,0,0,0.8);">
+          GT3 RS<span style="color: #d5001c;"></span>
+      </h1>
+      
+      <h2 data-aos="fade-up" data-aos-delay="300" style="
+          font-size: 1.8rem; 
+          font-weight: 300; 
+          color: #f0f0f0; 
+          margin-bottom: 0; 
+          letter-spacing: 1px;
+          border-left: 4px solid #d5001c; /* Linha de destaque Porsche */
+          padding-left: 25px;">
+          Nascido nas pistas. <strong style="color:white; font-weight:700;">Criado para as ruas.</strong>
+      </h2>
+
+      <div data-aos="fade-up" data-aos-delay="500" style="margin-top: 50px;">
+          <a href="#portfolio" style="
+              color: rgba(255,255,255,0.7); 
+              text-transform: uppercase; 
+              font-size: 0.85rem; 
+              letter-spacing: 3px; 
+              text-decoration: none;
+              border-bottom: 1px solid rgba(255,255,255,0.3);
+              padding-bottom: 5px;
+              transition: 0.3s;"
+              onmouseover="this.style.color='#fff'; this.style.borderColor='#fff'"
+              onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.borderColor='rgba(255,255,255,0.3)'">
+              Descobrir a lenda
+          </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+</section>
+
+    <!-- /Hero Section -->
+     <section id="specs" style="background-color: #0e0e0e; padding: 60px 0; border-bottom: 1px solid #222;">
+  <div class="container">
+    
+    <div class="row mb-5" data-aos="fade-up">
+        <div class="col-12">
+            <h3 style="color: #d5001c; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 5px;">
+                Performance
+            </h3>
+            <h2 style="color: #fff; font-size: 30px; font-weight: 700; font-style: italic;">
+                Dados Técnicos
+            </h2>
+        </div>
+    </div>
+
+    <div class="row text-center text-md-start">
+        
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="spec-item" style="border-left: 3px solid #d5001c; padding-left: 20px;">
+                <span style="display: block; color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Potência (PS)</span>
+                <span style="display: block; color: #fff; font-size: 42px; font-weight: 700; line-height: 1;">525</span>
+                <span style="font-size: 14px; color: #666;">386 kW</span>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="spec-item" style="border-left: 3px solid #333; padding-left: 20px; transition: 0.3s;" onmouseover="this.style.borderLeftColor='#d5001c'" onmouseout="this.style.borderLeftColor='#333'">
+                <span style="display: block; color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">0 - 100 km/h</span>
+                <span style="display: block; color: #fff; font-size: 42px; font-weight: 700; line-height: 1;">3.2 <small style="font-size: 20px;">s</small></span>
+                <span style="font-size: 14px; color: #666;">Launch Control</span>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="spec-item" style="border-left: 3px solid #333; padding-left: 20px; transition: 0.3s;" onmouseover="this.style.borderLeftColor='#d5001c'" onmouseout="this.style.borderLeftColor='#333'">
+                <span style="display: block; color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Velocidade Máx.</span>
+                <span style="display: block; color: #fff; font-size: 42px; font-weight: 700; line-height: 1;">296 <small style="font-size: 20px;">km/h</small></span>
+                <span style="font-size: 14px; color: #666;">Em pista</span>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+             <div class="spec-action h-100 d-flex align-items-center">
+                 <a href="#" style="
+                    display: inline-block;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    padding: 15px 30px;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    width: 100%;
+                    text-align: center;"
+                    onmouseover="this.style.background='#fff'; this.style.color='#000'"
+                    onmouseout="this.style.background='transparent'; this.style.color='#fff'">
+                    <i class="bx bx-download"></i> Ficha Completa
+                 </a>
+             </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-4 pt-4" style="border-top: 1px solid #222;">
+        <div class="col-lg-8">
+            <p style="color: #999; font-size: 14px; line-height: 1.8;">
+                *Valores de consumo e emissões determinados de acordo com o novo procedimento de teste WLTP. O foco no desenvolvimento do 911 GT3 RS foi maximizar o desempenho em pista, sem comprometer a homologação para as ruas.
+            </p>
+        </div>
+        <div class="col-lg-4 text-md-end">
+             <a href="#" style="color: #d5001c; text-decoration: none; font-size: 14px; text-transform: uppercase; font-weight: 700;">Comparar Modelos <i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- /Portfólio Section -->
+
+    <section id="portfolio" class="portfolio" style="padding: 80px 0; background-color: #0e0e0e;">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title mb-5" style="padding-bottom: 0;">
+      <h2 style="font-size: 14px; letter-spacing: 2px; color: #d5001c; text-transform: uppercase;">Modelos</h2>
+      <p style="font-size: 40px; font-weight: 700; color: #fff; font-style: italic; margin-top: 10px;">Escolha sua máquina</p>
+    </div>
+
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item mb-4">
+        <div class="porsche-card">
+          <div class="card-img-wrapper">
+             <img src="assets/img/Porche-911 GT3 RS.avif" class="img-fluid" alt="Porsche 911">
+          </div>
+          <div class="card-info">
+            <h3>911</h3>
+            <span>O Ícone Atemporal</span>
+            <a href="#" class="details-link">Configurar <i class="bx bx-right-arrow-alt"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item mb-4">
+        <div class="porsche-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/718.avif" class="img-fluid" alt="Porsche 718">
+          </div>
+          <div class="card-info">
+            <h3>718</h3>
+            <span>Motor Central</span>
+            <a href="#" class="details-link">Configurar <i class="bx bx-right-arrow-alt"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item mb-4">
+        <div class="porsche-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/Taycan.avif" class="img-fluid" alt="Porsche Taycan">
+          </div>
+          <div class="card-info">
+            <h3>Taycan</h3>
+            <span>100% Elétrico</span>
+            <a href="#" class="details-link">Configurar <i class="bx bx-right-arrow-alt"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   
+
+    
+
+<section id="dna" class="dna-section" style="padding: 100px 0; background-color: #0e0e0e; overflow: hidden;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="image-container" style="position: relative;">
+            <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; border-top: 2px solid #d5001c; border-left: 2px solid #d5001c; z-index: 0;"></div>
+            
+            <img src="assets/img/interior.jpg" class="img-fluid" alt="Porsche Interior" 
+                 style="position: relative; z-index: 1; filter: brightness(0.8) contrast(1.1); width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+        </div>
+      </div>
+
+      <div class="col-lg-5 pt-5 pt-lg-0 px-lg-5" data-aos="fade-left">
+        
+        <h3 style="color: #d5001c; font-size: 14px; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; margin-bottom: 20px;">
+            Porsche Cockpit
+        </h3>
+        
+        <h2 style="font-size: clamp(2rem, 3vw, 3rem); color: #fff; font-weight: 700; line-height: 1.1; margin-bottom: 30px;">
+            Você não entra.<br>
+            <span style="font-style: italic; color: #888;">Você veste.</span>
+        </h2>
+        
+        <p style="color: #b3b3b3; font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px;">
+            Cada botão, cada costura e cada display no Porsche Advanced Cockpit foi projetado com um único propósito: foco absoluto do piloto. Analógico onde importa, digital onde é preciso.
+        </p>
+
+        <ul style="list-style: none; padding: 0; margin-bottom: 40px;">
+            <li style="margin-bottom: 15px; display: flex; align-items: center; color: #fff;">
+                <i class="bx bx-check" style="color: #d5001c; font-size: 20px; margin-right: 10px;"></i>
+                Posição de pilotagem rebaixada
+            </li>
+            <li style="margin-bottom: 15px; display: flex; align-items: center; color: #fff;">
+                <i class="bx bx-check" style="color: #d5001c; font-size: 20px; margin-right: 10px;"></i>
+                Materiais de fibra de carbono
+            </li>
+            <li style="display: flex; align-items: center; color: #fff;">
+                <i class="bx bx-check" style="color: #d5001c; font-size: 20px; margin-right: 10px;"></i>
+                Cronógrafo Sport Chrono
+            </li>
+        </ul>
+
+        <a href="#" class="btn-porsche-text" style="color: #fff; text-decoration: none; border-bottom: 1px solid #fff; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; transition: 0.3s;">
+            Explorar Interior
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+    
+
+          
+
+
+
+    
+
+    
+
+    <!-- Stats Section -->
+     <section id="services" class="services" style="background-color: #0e0e0e; padding: 80px 0;">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title text-start mb-5">
+      <h2 style="font-size: 14px; letter-spacing: 2px; color: #d5001c; text-transform: uppercase;">Engenharia</h2>
+      <p style="font-size: 36px; font-weight: 700; color: #fff; font-style: italic;">Porsche Principle</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box" style="background: #151515; padding: 40px 30px; transition: 0.3s; border: 1px solid #222; width: 100%;">
+          <div class="icon" style="margin-bottom: 20px;">
+              <i class="bx bx-charging-station" style="font-size: 36px; color: #d5001c;"></i>
+          </div>
+          <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 15px;"><a href="" style="color: #fff; text-decoration: none;">E-Performance</a></h4>
+          <p style="color: #999; font-size: 14px; line-height: 1.6;">Tecnologia de 800 volts herdada de Le Mans. Carregamento ultrarrápido e performance consistente, sem perda de potência.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box" style="background: #151515; padding: 40px 30px; transition: 0.3s; border: 1px solid #222; width: 100%;">
+          <div class="icon" style="margin-bottom: 20px;">
+              <i class="bx bx-palette" style="font-size: 36px; color: #d5001c;"></i>
+          </div>
+          <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 15px;"><a href="" style="color: #fff; text-decoration: none;">Exclusive Manufaktur</a></h4>
+          <p style="color: #999; font-size: 14px; line-height: 1.6;">Seu Porsche, sua assinatura. Personalização artesanal com materiais nobres, cores exclusivas e atenção obsessiva aos detalhes.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box" style="background: #151515; padding: 40px 30px; transition: 0.3s; border: 1px solid #222; width: 100%;">
+          <div class="icon" style="margin-bottom: 20px;">
+              <i class="bx bx-mobile-alt" style="font-size: 36px; color: #d5001c;"></i>
+          </div>
+          <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 15px;"><a href="" style="color: #fff; text-decoration: none;">Porsche Connect</a></h4>
+          <p style="color: #999; font-size: 14px; line-height: 1.6;">O copiloto digital inteligente. Navegação em tempo real, controle remoto do veículo e integração total com Apple CarPlay®.</p>
+        </div>
+      </div>
+      
+      </div>
+  </div>
+</section>
+    <!-- /Stats Section -->
+
+   
+            
+
+   
+
+    <!-- Contact Section -->
+     <section id="contact" class="contact" style="padding: 80px 0; background-color: #0e0e0e;">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title mb-5">
+      <h2 style="color: #d5001c; font-size: 14px; letter-spacing: 2px;">Atendimento</h2>
+      <p style="color: #fff; font-size: 36px; font-weight: 700; font-style: italic;">Exclusive Request</p>
+    </div>
+
+    <div class="row mt-5">
+
+      <div class="col-lg-4">
+        <div class="info" style="background: #1a1a1a; padding: 30px; border-left: 3px solid #d5001c; height: 100%;">
+          
+          <div class="address mb-4">
+            <i class="bx bx-map" style="font-size: 24px; color: #d5001c; float: left;"></i>
+            <div style="margin-left: 40px;">
+                <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 5px;">Porsche Center</h4>
+                <p style="color: #888; font-size: 14px;">Av. das Nações Unidas, 1234<br>São Paulo, SP</p>
+            </div>
+          </div>
+
+          <div class="email mb-4">
+            <i class="bx bx-envelope" style="font-size: 24px; color: #d5001c; float: left;"></i>
+            <div style="margin-left: 40px;">
+                <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 5px;">Email</h4>
+                <p style="color: #888; font-size: 14px;">nfobrasil@porsche.com.br</p>
+            </div>
+          </div>
+
+          <div class="phone">
+            <i class="bx bx-phone-call" style="font-size: 24px; color: #d5001c; float: left;"></i>
+            <div style="margin-left: 40px;">
+                <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 5px;">Direct Line</h4>
+                <p style="color: #888; font-size: 14px;">+55 11 99999-9999</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <form action="" method="post" role="form" class="php-email-form" style="background: #1a1a1a; padding: 30px; height: 100%;">
+          
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
+            </div>
+          </div>
+          
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto (Ex: Test Drive 911)" required>
+          </div>
+          
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+          </div>
+          
+          <div class="text-center mt-4">
+              <button type="submit" style="background: transparent; border: 1px solid #fff; color: #fff; padding: 12px 40px; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; font-size: 14px;">Solicitar Contato</button>
+          </div>
+          
+        </form>
+      </div>
+
+    </div>
+
+    <div class="mt-5">
+        <iframe style="border:0; width: 100%; height: 270px; filter: grayscale(100%) invert(92%) contrast(83%);" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+  </div>
+</section>
+    <!-- /Contact Section -->
+
+  </main>
+
+ <footer id="footer" style="background-color: #000000; color: #fff; font-size: 14px; border-top: 1px solid #222;">
+    
+    <div class="footer-top" style="background-color: #000000; padding: 60px 0 30px 0;">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3 style="font-size: 24px; margin: 0 0 20px 0; padding: 2px 0 2px 0; line-height: 1; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fff;">
+                Porsche
+            </h3>
+            <p style="color: #888; font-size: 13px; line-height: 24px;">
+              Dr. Ing. h.c. F. Porsche AG<br>
+              Stuttgart, Alemanha<br><br>
+              <strong>Phone:</strong> +49 711 911 0<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 style="font-size: 14px; font-weight: bold; color: #fff; text-transform: uppercase; position: relative; padding-bottom: 12px;">Modelos</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">911</a></li>
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">718 Boxster/Cayman</a></li>
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">Taycan</a></li>
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">Macan</a></li>
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">Cayenne</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 style="font-size: 14px; font-weight: bold; color: #fff; text-transform: uppercase; position: relative; padding-bottom: 12px;">Serviços</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">Configurar Veículo</a></li>
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">Encontrar Concessionária</a></li>
+              <li style="padding: 5px 0;"><i class="bx bx-chevron-right" style="color: #d5001c;"></i> <a href="#" style="color: #aaa; text-decoration: none; transition: 0.3s;">Porsche Lifestyle</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4 style="font-size: 14px; font-weight: bold; color: #fff; text-transform: uppercase; position: relative; padding-bottom: 12px;">Porsche News</h4>
+            <p style="color: #aaa; font-size: 13px;">Receba as últimas notícias sobre lançamentos e eventos exclusivos.</p>
+            <form action="" method="post" style="margin-top: 20px; background: #fff; padding: 6px 10px; position: relative; border-radius: 0;">
+              <input type="email" name="email" style="border: 0; padding: 4px 8px; width: calc(100% - 100px); color: #000 !important; background: #fff !important; outline: none;"><input type="submit" value="Inscrever" style="position: absolute; top: 0; right: 0; bottom: 0; border: 0; background: #000; font-size: 14px; padding: 0 20px; color: #fff; transition: 0.3s; border-radius: 0; text-transform: uppercase; font-weight: 600;">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4" style="border-top: 1px solid #222;">
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright" style="color: #666;">
+          &copy; 2025 <strong><span>Porsche Brasil</span></strong>. Todos os direitos reservados.
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter" style="display: inline-block; background: #222; color: #fff; line-height: 1; padding: 8px 0; margin-right: 4px; border-radius: 50%; text-align: center; width: 36px; height: 36px; transition: 0.3s;"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook" style="display: inline-block; background: #222; color: #fff; line-height: 1; padding: 8px 0; margin-right: 4px; border-radius: 50%; text-align: center; width: 36px; height: 36px; transition: 0.3s;"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram" style="display: inline-block; background: #222; color: #fff; line-height: 1; padding: 8px 0; margin-right: 4px; border-radius: 50%; text-align: center; width: 36px; height: 36px; transition: 0.3s;"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="linkedin" style="display: inline-block; background: #222; color: #fff; line-height: 1; padding: 8px 0; margin-right: 4px; border-radius: 50%; text-align: center; width: 36px; height: 36px; transition: 0.3s;"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
